@@ -1,5 +1,5 @@
 Simulator report for dice_simulator
-Sat Jan 05 16:55:03 2019
+Sun Jan 06 00:45:28 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+-----------------+
 ; Simulation Start Time       ; 0 ps            ;
 ; Simulation End Time         ; 100.0 ms        ;
-; Simulation Netlist Size     ; 8 nodes         ;
-; Simulation Coverage         ;      77.78 %    ;
-; Total Number of Transitions ; 44              ;
+; Simulation Netlist Size     ; 100 nodes       ;
+; Simulation Coverage         ;      32.06 %    ;
+; Total Number of Transitions ; 248             ;
 ; Simulation Breakpoints      ; 0               ;
 ; Family                      ; FLEX10K         ;
 ; Device                      ; EPF10K70RC240-4 ;
@@ -95,49 +95,261 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      77.78 % ;
-; Total nodes checked                                 ; 8            ;
-; Total output ports checked                          ; 9            ;
-; Total output ports with complete 1/0-value coverage ; 7            ;
-; Total output ports with no 1/0-value coverage       ; 0            ;
-; Total output ports with no 1-value coverage         ; 0            ;
-; Total output ports with no 0-value coverage         ; 2            ;
+; Total coverage as a percentage                      ;      32.06 % ;
+; Total nodes checked                                 ; 100          ;
+; Total output ports checked                          ; 131          ;
+; Total output ports with complete 1/0-value coverage ; 42           ;
+; Total output ports with no 1/0-value coverage       ; 89           ;
+; Total output ports with no 1-value coverage         ; 89           ;
+; Total output ports with no 0-value coverage         ; 89           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                                                                                                   ;
-+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                 ; Output Port Name                                                                               ; Output Port Type ;
-+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
-; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0] ; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]      ; data_out0        ;
-; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0] ; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT ; cout             ;
-; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1] ; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]      ; data_out0        ;
-; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1] ; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT ; cout             ;
-; |dice_simulator|Switch                                                                    ; |dice_simulator|Switch~corein                                                                  ; dataout          ;
-; |dice_simulator|Dseg[0]                                                                   ; |dice_simulator|Dseg[0]                                                                        ; padio            ;
-; |dice_simulator|Dseg[1]                                                                   ; |dice_simulator|Dseg[1]                                                                        ; padio            ;
-+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                                                               ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                                         ; Output Port Name                                                                                                                                   ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |dice_simulator_ver|Dseg[0]~reg0                                                                                                                  ; |dice_simulator_ver|Dseg[0]~reg0                                                                                                                   ; data_out0        ;
+; |dice_simulator_ver|Dseg[1]~reg0                                                                                                                  ; |dice_simulator_ver|Dseg[1]~reg0                                                                                                                   ; data_out0        ;
+; |dice_simulator_ver|Dseg[2]~reg0                                                                                                                  ; |dice_simulator_ver|Dseg[2]~reg0                                                                                                                   ; data_out0        ;
+; |dice_simulator_ver|Dseg[3]~reg0                                                                                                                  ; |dice_simulator_ver|Dseg[3]~reg0                                                                                                                   ; data_out0        ;
+; |dice_simulator_ver|Dseg[4]~reg0                                                                                                                  ; |dice_simulator_ver|Dseg[4]~reg0                                                                                                                   ; data_out0        ;
+; |dice_simulator_ver|Dseg[5]~reg0                                                                                                                  ; |dice_simulator_ver|Dseg[5]~reg0                                                                                                                   ; data_out0        ;
+; |dice_simulator_ver|Dseg[6]~reg0                                                                                                                  ; |dice_simulator_ver|Dseg[6]~reg0                                                                                                                   ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]     ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]     ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |dice_simulator_ver|prev_val[2]                                                                                                                   ; |dice_simulator_ver|prev_val[2]                                                                                                                    ; data_out0        ;
+; |dice_simulator_ver|counter[0]                                                                                                                    ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT                                                       ; cout             ;
+; |dice_simulator_ver|prev_val[0]                                                                                                                   ; |dice_simulator_ver|prev_val[0]                                                                                                                    ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[0][0]                                                                          ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[0][0]                                                                           ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|unreg_res_node[0]~0 ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|addcore:adder|unreg_res_node[0]~0  ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[2][0]                                                                          ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[2][0]                                                                           ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|unreg_res_node[1]                        ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|addcore:adder|unreg_res_node[1]                         ; data_out0        ;
+; |dice_simulator_ver|counter[1]                                                                                                                    ; |dice_simulator_ver|counter[1]                                                                                                                     ; data_out0        ;
+; |dice_simulator_ver|prev_val[1]                                                                                                                   ; |dice_simulator_ver|prev_val[1]                                                                                                                    ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[1][1]                                                                          ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[1][1]                                                                           ; data_out0        ;
+; |dice_simulator_ver|counter[2]                                                                                                                    ; |dice_simulator_ver|counter[2]                                                                                                                     ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[0][2]                                                                          ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[0][2]                                                                           ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[1][0]                                                                          ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[1][0]                                                                           ; data_out0        ;
+; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[0][1]                                                                          ; |dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|decoder_node[0][1]                                                                           ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]                                                           ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]                                                            ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]                                                           ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT                                                       ; cout             ;
+; |dice_simulator_ver|Equal0~4                                                                                                                      ; |dice_simulator_ver|Equal0~4                                                                                                                       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]                                                           ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]                                                            ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]                                                           ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT                                                       ; cout             ;
+; |dice_simulator_ver|Equal0~25                                                                                                                     ; |dice_simulator_ver|Equal0~25                                                                                                                      ; data_out0        ;
+; |dice_simulator_ver|counter[3]                                                                                                                    ; |dice_simulator_ver|counter[3]                                                                                                                     ; data_out0        ;
+; |dice_simulator_ver|Equal0~23                                                                                                                     ; |dice_simulator_ver|Equal0~44                                                                                                                      ; cascout          ;
+; |dice_simulator_ver|Equal0~28                                                                                                                     ; |dice_simulator_ver|Equal0~28                                                                                                                      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]                                                           ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]                                                            ; data_out0        ;
+; |dice_simulator_ver|Switch                                                                                                                        ; |dice_simulator_ver|Switch~corein                                                                                                                  ; dataout          ;
+; |dice_simulator_ver|CLK                                                                                                                           ; |dice_simulator_ver|CLK~corein                                                                                                                     ; dataout          ;
+; |dice_simulator_ver|Dseg[0]                                                                                                                       ; |dice_simulator_ver|Dseg[0]                                                                                                                        ; padio            ;
+; |dice_simulator_ver|Dseg[1]                                                                                                                       ; |dice_simulator_ver|Dseg[1]                                                                                                                        ; padio            ;
+; |dice_simulator_ver|Dseg[2]                                                                                                                       ; |dice_simulator_ver|Dseg[2]                                                                                                                        ; padio            ;
+; |dice_simulator_ver|Dseg[3]                                                                                                                       ; |dice_simulator_ver|Dseg[3]                                                                                                                        ; padio            ;
+; |dice_simulator_ver|Dseg[4]                                                                                                                       ; |dice_simulator_ver|Dseg[4]                                                                                                                        ; padio            ;
+; |dice_simulator_ver|Dseg[5]                                                                                                                       ; |dice_simulator_ver|Dseg[5]                                                                                                                        ; padio            ;
+; |dice_simulator_ver|Dseg[6]                                                                                                                       ; |dice_simulator_ver|Dseg[6]                                                                                                                        ; padio            ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-------------------------------------------------+
-; Missing 1-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                ; Output Port Name                                                                              ; Output Port Type ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |dice_simulator_ver|counter[30]                                                          ; |dice_simulator_ver|counter[30]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[29]                                                          ; |dice_simulator_ver|counter[29]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[28]                                                          ; |dice_simulator_ver|counter[28]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[27]                                                          ; |dice_simulator_ver|counter[27]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~17                                                            ; |dice_simulator_ver|Equal0~35                                                                 ; cascout          ;
+; |dice_simulator_ver|counter[31]                                                          ; |dice_simulator_ver|counter[31]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[22]                                                          ; |dice_simulator_ver|counter[22]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[21]                                                          ; |dice_simulator_ver|counter[21]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[20]                                                          ; |dice_simulator_ver|counter[20]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[19]                                                          ; |dice_simulator_ver|counter[19]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~19                                                            ; |dice_simulator_ver|Equal0~38                                                                 ; cascout          ;
+; |dice_simulator_ver|counter[26]                                                          ; |dice_simulator_ver|counter[26]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[25]                                                          ; |dice_simulator_ver|counter[25]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[24]                                                          ; |dice_simulator_ver|counter[24]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[23]                                                          ; |dice_simulator_ver|counter[23]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~26                                                            ; |dice_simulator_ver|Equal0~26                                                                 ; data_out0        ;
+; |dice_simulator_ver|counter[14]                                                          ; |dice_simulator_ver|counter[14]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[13]                                                          ; |dice_simulator_ver|counter[13]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[12]                                                          ; |dice_simulator_ver|counter[12]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[11]                                                          ; |dice_simulator_ver|counter[11]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~21                                                            ; |dice_simulator_ver|Equal0~41                                                                 ; cascout          ;
+; |dice_simulator_ver|counter[18]                                                          ; |dice_simulator_ver|counter[18]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[17]                                                          ; |dice_simulator_ver|counter[17]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[16]                                                          ; |dice_simulator_ver|counter[16]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[15]                                                          ; |dice_simulator_ver|counter[15]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~27                                                            ; |dice_simulator_ver|Equal0~27                                                                 ; data_out0        ;
+; |dice_simulator_ver|counter[6]                                                           ; |dice_simulator_ver|counter[6]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[5]                                                           ; |dice_simulator_ver|counter[5]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[4]                                                           ; |dice_simulator_ver|counter[4]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[10]                                                          ; |dice_simulator_ver|counter[10]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[9]                                                           ; |dice_simulator_ver|counter[9]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[8]                                                           ; |dice_simulator_ver|counter[8]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[7]                                                           ; |dice_simulator_ver|counter[7]                                                                ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|unreg_res_node[31]                    ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|unreg_res_node[31]                         ; data_out0        ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                                                                                                 ;
-+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                 ; Output Port Name                                                                          ; Output Port Type ;
-+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
-; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2] ; |dice_simulator|lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2] ; data_out0        ;
-; |dice_simulator|Dseg[2]                                                                   ; |dice_simulator|Dseg[2]                                                                   ; padio            ;
-+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                ; Output Port Name                                                                              ; Output Port Type ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |dice_simulator_ver|counter[30]                                                          ; |dice_simulator_ver|counter[30]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[29]                                                          ; |dice_simulator_ver|counter[29]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[28]                                                          ; |dice_simulator_ver|counter[28]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[27]                                                          ; |dice_simulator_ver|counter[27]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~17                                                            ; |dice_simulator_ver|Equal0~35                                                                 ; cascout          ;
+; |dice_simulator_ver|counter[31]                                                          ; |dice_simulator_ver|counter[31]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[22]                                                          ; |dice_simulator_ver|counter[22]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[21]                                                          ; |dice_simulator_ver|counter[21]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[20]                                                          ; |dice_simulator_ver|counter[20]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[19]                                                          ; |dice_simulator_ver|counter[19]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~19                                                            ; |dice_simulator_ver|Equal0~38                                                                 ; cascout          ;
+; |dice_simulator_ver|counter[26]                                                          ; |dice_simulator_ver|counter[26]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[25]                                                          ; |dice_simulator_ver|counter[25]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[24]                                                          ; |dice_simulator_ver|counter[24]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[23]                                                          ; |dice_simulator_ver|counter[23]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~26                                                            ; |dice_simulator_ver|Equal0~26                                                                 ; data_out0        ;
+; |dice_simulator_ver|counter[14]                                                          ; |dice_simulator_ver|counter[14]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[13]                                                          ; |dice_simulator_ver|counter[13]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[12]                                                          ; |dice_simulator_ver|counter[12]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[11]                                                          ; |dice_simulator_ver|counter[11]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~21                                                            ; |dice_simulator_ver|Equal0~41                                                                 ; cascout          ;
+; |dice_simulator_ver|counter[18]                                                          ; |dice_simulator_ver|counter[18]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[17]                                                          ; |dice_simulator_ver|counter[17]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[16]                                                          ; |dice_simulator_ver|counter[16]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[15]                                                          ; |dice_simulator_ver|counter[15]                                                               ; data_out0        ;
+; |dice_simulator_ver|Equal0~27                                                            ; |dice_simulator_ver|Equal0~27                                                                 ; data_out0        ;
+; |dice_simulator_ver|counter[6]                                                           ; |dice_simulator_ver|counter[6]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[5]                                                           ; |dice_simulator_ver|counter[5]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[4]                                                           ; |dice_simulator_ver|counter[4]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[10]                                                          ; |dice_simulator_ver|counter[10]                                                               ; data_out0        ;
+; |dice_simulator_ver|counter[9]                                                           ; |dice_simulator_ver|counter[9]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[8]                                                           ; |dice_simulator_ver|counter[8]                                                                ; data_out0        ;
+; |dice_simulator_ver|counter[7]                                                           ; |dice_simulator_ver|counter[7]                                                                ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[30]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[29]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[28]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[27]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[26]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[25]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[24]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[23]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]      ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10] ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]~COUT ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]       ; data_out0        ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]  ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT  ; cout             ;
+; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|unreg_res_node[31]                    ; |dice_simulator_ver|lpm_add_sub:Add0|addcore:adder|unreg_res_node[31]                         ; data_out0        ;
++------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -153,18 +365,29 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Jan 05 16:55:02 2019
+    Info: Processing started: Sun Jan 06 00:45:28 2019
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off dice_simulator -c dice_simulator
 Info: Using vector source file "C:/Users/Sylwia/Documents/arkadius/dice_simulator/dice_simulator_waveform.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "Switch2" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "DSeg2[6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "DSeg2[5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "DSeg2[4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "DSeg2[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "DSeg2[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "DSeg2[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "DSeg2[0]" in design.
+Info: Inverted registers were found during simulation
+    Info: Register: |dice_simulator_ver|prev_val[2]
+    Info: Register: |dice_simulator_ver|prev_val[1]
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      77.78 %
-Info: Number of transitions in simulation is 44
-Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+Info: Simulation coverage is      32.06 %
+Info: Number of transitions in simulation is 248
+Info: Quartus II Simulator was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 174 megabytes
-    Info: Processing ended: Sat Jan 05 16:55:03 2019
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun Jan 06 00:45:28 2019
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

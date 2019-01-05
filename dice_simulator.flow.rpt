@@ -1,5 +1,5 @@
 Flow report for dice_simulator
-Sat Jan 05 16:54:57 2019
+Sun Jan 06 00:45:17 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,16 +38,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Sat Jan 05 16:54:57 2019        ;
+; Flow Status             ; Successful - Sun Jan 06 00:45:17 2019        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; dice_simulator                               ;
-; Top-level Entity Name   ; dice_simulator                               ;
+; Top-level Entity Name   ; dice_simulator_ver                           ;
 ; Family                  ; FLEX10K                                      ;
 ; Device                  ; EPF10K70RC240-4                              ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; Yes                                          ;
-; Total logic elements    ; 3 / 3,744 ( < 1 % )                          ;
-; Total pins              ; 5 / 189 ( 3 % )                              ;
+; Total logic elements    ; 91 / 3,744 ( 2 % )                           ;
+; Total pins              ; 9 / 189 ( 5 % )                              ;
 ; Total memory bits       ; 0 / 18,432 ( 0 % )                           ;
 +-------------------------+----------------------------------------------+
 
@@ -57,22 +57,23 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/05/2019 16:54:50 ;
+; Start date & time ; 01/06/2019 00:45:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; dice_simulator      ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 233654130006479.154670369014448 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++------------------------------------+---------------------------------+----------------+-------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value  ; Entity Name ; Section Id     ;
++------------------------------------+---------------------------------+----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 233654130006479.154673190711584 ; --             ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --             ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                   ; dice_simulator_ver              ; dice_simulator ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --             ; --          ; eda_blast_fpga ;
++------------------------------------+---------------------------------+----------------+-------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -80,11 +81,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 255 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:02     ; 1.0                     ; 231 MB              ; 00:00:02                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 223 MB              ; 00:00:00                           ;
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 257 MB              ; 00:00:03                           ;
+; Fitter                  ; 00:00:03     ; 1.0                     ; 232 MB              ; 00:00:03                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 223 MB              ; 00:00:01                           ;
 ; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 190 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
+; Total                   ; 00:00:06     ; --                      ; --                  ; 00:00:07                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

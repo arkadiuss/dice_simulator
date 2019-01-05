@@ -38,7 +38,7 @@ begin
 		end if;
 	end process;
 	with std_logic_vector(to_unsigned(prev_val, 3)) select
-		Dseg <= "0000001" WHEN "001",
+		Dseg <= "1001111" WHEN "001",
 				"0010010" WHEN "010",
 				"0000110" WHEN "011",
 				"1001100" WHEN "100",

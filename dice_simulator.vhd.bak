@@ -11,10 +11,9 @@ entity dice_simulator is
 end dice_simulator;
 
 architecture Behavioral of dice_simulator is
-constant salt: integer := 3;
 constant MAX_VAL: integer := 100;
 signal counter: integer := 0;
-signal prev_val: integer := salt;
+signal prev_val: integer := 6;
 begin
 	process(CLK)
 	begin

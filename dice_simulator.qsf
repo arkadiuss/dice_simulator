@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY FLEX10K
 set_global_assignment -name DEVICE "EPF10K70RC240-4"
-set_global_assignment -name TOP_LEVEL_ENTITY dice_simulator
+set_global_assignment -name TOP_LEVEL_ENTITY dice_simulator_ver
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:47:42  JANUARY 05, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
@@ -47,4 +47,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name VHDL_FILE dice_simulator.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE dice_simulator_waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE dice_simulator_ver.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE dice_simulator_waveform.vwf
+set_global_assignment -name SYSTEMVERILOG_FILE dice_simulator_ver.sv

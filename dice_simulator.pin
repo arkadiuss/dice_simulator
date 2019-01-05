@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Sat Jan 05 16:54:54 2019
+File Generation Date & Time: Sun Jan 06 00:45:14 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "dice_simulator"  ASSIGNED TO AN: EPF10K70RC240-4
 
@@ -47,8 +47,8 @@ CONF_DONE                    : 2         : bidir  :                   :         
 nCEO                         : 3         : output :                   :         :           :                
 TDO                          : 4         : output :                   :         :           :                
 VCC_INT                      : 5         : power  :                   : 5.0V    :           :                
-Dseg[0]                      : 6         : output : TTL               :         :           : N              
-Dseg[2]                      : 7         : output : TTL               :         :           : N              
+GND*                         : 6         :        :                   :         :           :                
+GND*                         : 7         :        :                   :         :           :                
 GND*                         : 8         :        :                   :         :           :                
 GND*                         : 9         :        :                   :         :           :                
 GND_INT                      : 10        : gnd    :                   :         :           :                
@@ -67,10 +67,10 @@ GND_INT                      : 22        : gnd    :                   :         
 GND*                         : 23        :        :                   :         :           :                
 GND*                         : 24        :        :                   :         :           :                
 GND*                         : 25        :        :                   :         :           :                
-GND*                         : 26        :        :                   :         :           :                
+Dseg[0]                      : 26        : output : TTL               :         :           : N              
 VCC_INT                      : 27        : power  :                   : 5.0V    :           :                
-GND*                         : 28        :        :                   :         :           :                
-GND*                         : 29        :        :                   :         :           :                
+Dseg[1]                      : 28        : output : TTL               :         :           : N              
+Dseg[3]                      : 29        : output : TTL               :         :           : N              
 GND*                         : 30        :        :                   :         :           :                
 GND*                         : 31        :        :                   :         :           :                
 GND_INT                      : 32        : gnd    :                   :         :           :                
@@ -132,7 +132,7 @@ GND*                         : 87        :        :                   :         
 GND*                         : 88        :        :                   :         :           :                
 VCC_INT                      : 89        : power  :                   : 5.0V    :           :                
 GND+                         : 90        :        :                   :         :           :                
-Switch                       : 91        : input  : TTL               :         :           : N              
+CLK                          : 91        : input  : TTL               :         :           : N              
 GND+                         : 92        :        :                   :         :           :                
 GND_INT                      : 93        : gnd    :                   :         :           :                
 GND*                         : 94        :        :                   :         :           :                
@@ -197,10 +197,10 @@ GND*                         : 152       :        :                   :         
 GND*                         : 153       :        :                   :         :           :                
 GND*                         : 154       :        :                   :         :           :                
 GND_INT                      : 155       : gnd    :                   :         :           :                
-GND*                         : 156       :        :                   :         :           :                
-GND*                         : 157       :        :                   :         :           :                
-GND*                         : 158       :        :                   :         :           :                
-GND*                         : 159       :        :                   :         :           :                
+Dseg[2]                      : 156       : output : TTL               :         :           : N              
+Dseg[6]                      : 157       : output : TTL               :         :           : N              
+Dseg[4]                      : 158       : output : TTL               :         :           : N              
+Dseg[5]                      : 159       : output : TTL               :         :           : N              
 VCC_INT                      : 160       : power  :                   : 5.0V    :           :                
 GND*                         : 161       :        :                   :         :           :                
 GND*                         : 162       :        :                   :         :           :                
@@ -215,7 +215,7 @@ VCC_INT                      : 170       : power  :                   : 5.0V    
 GND*                         : 171       :        :                   :         :           :                
 GND*                         : 172       :        :                   :         :           :                
 GND*                         : 173       :        :                   :         :           :                
-Dseg[1]                      : 174       : output : TTL               :         :           : N              
+GND*                         : 174       :        :                   :         :           :                
 GND*                         : 175       :        :                   :         :           :                
 GND_INT                      : 176       : gnd    :                   :         :           :                
 TDI                          : 177       : input  :                   :         :           :                
@@ -252,8 +252,8 @@ GND*                         : 207       :        :                   :         
 GND*                         : 208       :        :                   :         :           :                
 GND*                         : 209       :        :                   :         :           :                
 GND+                         : 210       :        :                   :         :           :                
-GND+                         : 211       :        :                   :         :           :                
-CLK                          : 212       : input  : TTL               :         :           : N              
+Switch                       : 211       : input  : TTL               :         :           : N              
+GND+                         : 212       :        :                   :         :           :                
 GND*                         : 213       :        :                   :         :           :                
 GND*                         : 214       :        :                   :         :           :                
 GND*                         : 215       :        :                   :         :           :                
