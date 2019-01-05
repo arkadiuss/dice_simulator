@@ -1,0 +1,10 @@
+Fitter Status : Successful - Sat Jan 05 16:54:54 2019
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : dice_simulator
+Top-level Entity Name : dice_simulator
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 3 / 3,744 ( < 1 % )
+Total pins : 5 / 189 ( 3 % )
+Total memory bits : 0 / 18,432 ( 0 % )

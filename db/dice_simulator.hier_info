@@ -1,0 +1,39 @@
+|dice_simulator
+CLK => ~NO_FANOUT~
+Switch => prev_val[31].CLK
+Switch => prev_val[30].CLK
+Switch => prev_val[29].CLK
+Switch => prev_val[28].CLK
+Switch => prev_val[27].CLK
+Switch => prev_val[26].CLK
+Switch => prev_val[25].CLK
+Switch => prev_val[24].CLK
+Switch => prev_val[23].CLK
+Switch => prev_val[22].CLK
+Switch => prev_val[21].CLK
+Switch => prev_val[20].CLK
+Switch => prev_val[19].CLK
+Switch => prev_val[18].CLK
+Switch => prev_val[17].CLK
+Switch => prev_val[16].CLK
+Switch => prev_val[15].CLK
+Switch => prev_val[14].CLK
+Switch => prev_val[13].CLK
+Switch => prev_val[12].CLK
+Switch => prev_val[11].CLK
+Switch => prev_val[10].CLK
+Switch => prev_val[9].CLK
+Switch => prev_val[8].CLK
+Switch => prev_val[7].CLK
+Switch => prev_val[6].CLK
+Switch => prev_val[5].CLK
+Switch => prev_val[4].CLK
+Switch => prev_val[3].CLK
+Switch => prev_val[2].CLK
+Switch => prev_val[1].CLK
+Switch => prev_val[0].CLK
+Dseg[0] <= prev_val[0].DB_MAX_OUTPUT_PORT_TYPE
+Dseg[1] <= prev_val[1].DB_MAX_OUTPUT_PORT_TYPE
+Dseg[2] <= prev_val[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

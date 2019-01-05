@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.800 ns
+From           : lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]
+To             : Dseg[1]
+From Clock     : Switch
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Switch'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
+From           : lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : lpm_counter:prev_val_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]
+From Clock     : Switch
+To Clock       : Switch
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
