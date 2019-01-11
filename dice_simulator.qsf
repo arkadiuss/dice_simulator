@@ -50,3 +50,5 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE dice_simulator_waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE dice_simulator_ver.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE dice_simulator_waveform.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE dice_simulator_ver.sv
+set_global_assignment -name VHDL_FILE ps2_keyboard.vhd
+set_global_assignment -name VHDL_FILE debouncing.vhd
