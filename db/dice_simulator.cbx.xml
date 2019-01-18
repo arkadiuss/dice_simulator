@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="dice_simulator">
-		<CBX_INST_ENTRY INSTANCE_NAME="|dice_simulator_ver|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_soh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_lrg.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|dice_simulator_ver|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_mrg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|dice_simulator|debounce:deb|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_poh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|dice_simulator|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_soh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|dice_simulator|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_lkg.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

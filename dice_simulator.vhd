@@ -11,15 +11,29 @@ entity dice_simulator is
 end dice_simulator;
 
 architecture Behavioral of dice_simulator is
-constant MAX_VAL: integer := 100;
+signal debounced: STD_LOGIC;
+constant MAX_VAL: integer := 100000;
 signal counter: integer := 0;
 signal prev_val: integer := 6;
+
+component debounce
+	PORT(
+		clk     : IN  STD_LOGIC;
+		button  : IN  STD_LOGIC; 
+		result  : OUT STD_LOGIC);		
+end component;
 begin
+deb: debounce
+	PORT MAP(
+		CLK => clk,
+		button => Switch,
+		result => debounced
+	);
 	process(CLK)
 	begin
 		if rising_edge(CLK) then
-			if counter = MAX_VAL then
-				counter <= 0;
+			if(counter = MAX_VAL) then
+				counter <= 1;
 			else
 				counter <= counter + 1;
 			end if;	
@@ -27,14 +41,15 @@ begin
 	end process;
 	
 	process(Switch)
+	variable new_val: integer;
 	begin
-		if rising_edge(Switch) then
-			prev_val <= counter * prev_val;
-			prev_val <= prev_val mod 8;
-			if prev_val >= 6 then
-				prev_val <= prev_val - 6;
+		if falling_edge(debounced) then
+			new_val := counter * prev_val;
+			new_val := new_val mod 8;
+			if new_val >= 6 then
+				new_val := new_val - 6;
 			end if;
-			prev_val <= prev_val +1;	
+			prev_val <= new_val +1;	
 		end if;
 	end process;
 	with std_logic_vector(to_unsigned(prev_val, 3)) select

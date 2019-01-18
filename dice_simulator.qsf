@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY FLEX10K
 set_global_assignment -name DEVICE "EPF10K70RC240-4"
-set_global_assignment -name TOP_LEVEL_ENTITY dice_simulator_ver
+set_global_assignment -name TOP_LEVEL_ENTITY dice_simulator
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:47:42  JANUARY 05, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
@@ -52,3 +52,14 @@ set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE dice_simulator_wavef
 set_global_assignment -name SYSTEMVERILOG_FILE dice_simulator_ver.sv
 set_global_assignment -name VHDL_FILE ps2_keyboard.vhd
 set_global_assignment -name VHDL_FILE debouncing.vhd
+set_global_assignment -name FLEX10K_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_91 -to CLK
+set_location_assignment PIN_28 -to Switch
+set_location_assignment PIN_13 -to Dseg[0]
+set_location_assignment PIN_12 -to Dseg[1]
+set_location_assignment PIN_11 -to Dseg[2]
+set_location_assignment PIN_9 -to Dseg[3]
+set_location_assignment PIN_8 -to Dseg[4]
+set_location_assignment PIN_7 -to Dseg[5]
+set_location_assignment PIN_6 -to Dseg[6]
+set_global_assignment -name MISC_FILE "C:/Users/Student/Downloads/dice_simulator-master/dice_simulator.dpf"

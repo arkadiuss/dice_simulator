@@ -2,13 +2,13 @@ module dice_simulator_ver(
 	input logic CLK, Switch,
 	output reg[6:0] Dseg
 );
-	const int MAX_VAL = 9;
-	reg unsigned[31:0] counter = 0; 
+	const int MAX_VAL = 100000;
+	reg unsigned[31:0] counter = 1; 
 	reg unsigned[31:0] prev_val = 6;	
 	always@(posedge CLK)
 		begin
 			if (counter == MAX_VAL) 
-				counter <= 0;
+				counter <= 1;
 			else
 				counter <= counter + 1;	
 		end
