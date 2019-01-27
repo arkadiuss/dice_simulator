@@ -16,19 +16,19 @@ constant MAX_VAL: integer := 100000;
 signal counter: integer := 0;
 signal prev_val: integer := 6;
 signal PS2_code_new: STD_LOGIC;
-signal PS2_code: STD_LOGIC;
+signal PS2_code: STD_LOGIC_VECTOR(7 DOWNTO 0);
 component ps2_keyboard
 	PORT(
 	clk          : IN  STD_LOGIC;      
     ps2_clk      : IN  STD_LOGIC;        
     ps2_data     : IN  STD_LOGIC;
     ps2_code_new : OUT STD_LOGIC;
-    ps2_code     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+    ps2_code     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 end component;	
 begin
 ps2: ps2_keyboard
-	PORT_MAP(
+	PORT MAP(
 		CLK => clk,
 		PS2_CLK => ps2_clk,
 		PS2_data => ps2_data,
@@ -49,7 +49,7 @@ ps2: ps2_keyboard
 	process(PS2_code_new)
 	variable new_val: integer;
 	begin
-		if falling_edge(PS2_code_new) then
+		if (falling_edge(PS2_code_new) and PS2_code = "01011010") then
 			new_val := counter * prev_val;
 			new_val := new_val mod 8;
 			if new_val >= 6 then
@@ -58,6 +58,7 @@ ps2: ps2_keyboard
 			prev_val <= new_val +1;	
 		end if;
 	end process;
+	--DSeg <= PS2_code(7 downto 1);
 	with std_logic_vector(to_unsigned(prev_val, 3)) select
 		Dseg <= "1001111" WHEN "001",
 				"0010010" WHEN "010",

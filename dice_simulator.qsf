@@ -63,3 +63,6 @@ set_location_assignment PIN_8 -to Dseg[4]
 set_location_assignment PIN_7 -to Dseg[5]
 set_location_assignment PIN_6 -to Dseg[6]
 set_global_assignment -name MISC_FILE "C:/Users/Student/Downloads/dice_simulator-master/dice_simulator.dpf"
+set_global_assignment -name VHDL_FILE dice_simulator_keyboard.vhd
+set_location_assignment PIN_30 -to PS2_CLK
+set_location_assignment PIN_31 -to PS2_data

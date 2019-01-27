@@ -568,7 +568,7 @@ VECTOR("C:/Users/Student/Downloads/dice_simulator-master/db/dice_simulator.sim.c
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 100000000000;
-		NUMERATOR = 522;
+		NUMERATOR = 712;
 		DENOMINATOR = 100000000000;
 		TOP_INDEX = 0;
 	}

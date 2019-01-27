@@ -2,47 +2,69 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity dice_simulator is
+entity dice_simulator_keyboard is
 	Port(
 		CLK: in STD_LOGIC;
-		Switch: in STD_LOGIC;  
+		PS2_CLK: in STD_LOGIC;
+		PS2_data: in STD_LOGIC;  
 		Dseg: out STD_LOGIC_VECTOR(6 downto 0)
 	);
-end dice_simulator;
+end dice_simulator_keyboard;
 
-architecture Behavioral of dice_simulator is
-constant MAX_VAL: integer := 100;
+architecture Behavioral of dice_simulator_keyboard is
+constant MAX_VAL: integer := 100000;
 signal counter: integer := 0;
 signal prev_val: integer := 6;
+signal PS2_code_new: STD_LOGIC;
+signal PS2_code: STD_LOGIC_VECTOR(7 DOWNTO 0);
+component ps2_keyboard
+	PORT(
+	clk          : IN  STD_LOGIC;      
+    ps2_clk      : IN  STD_LOGIC;        
+    ps2_data     : IN  STD_LOGIC;
+    ps2_code_new : OUT STD_LOGIC;
+    ps2_code     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+end component;	
 begin
+ps2: ps2_keyboard
+	PORT MAP(
+		CLK => clk,
+		PS2_CLK => ps2_clk,
+		PS2_data => ps2_data,
+		ps2_code_new => PS2_code_new,
+		ps2_code => PS2_code
+	);
 	process(CLK)
 	begin
 		if rising_edge(CLK) then
-			if counter = MAX_VAL then
-				counter <= 0;
+			if(counter = MAX_VAL) then
+				counter <= 1;
 			else
 				counter <= counter + 1;
 			end if;	
 		end if;
 	end process;
 	
-	process(Switch)
+	process(PS2_code_new)
+	variable new_val: integer;
 	begin
-		if rising_edge(Switch) then
-			prev_val <= counter * prev_val;
-			prev_val <= prev_val mod 8;
-			if prev_val >= 6 then
-				prev_val <= prev_val - 6;
+		if (falling_edge(PS2_code_new) and PS2_code = "01011010") then
+			new_val := counter * prev_val;
+			new_val := new_val mod 8;
+			if new_val >= 6 then
+				new_val := new_val - 6;
 			end if;
-			prev_val <= prev_val +1;	
+			prev_val <= new_val +1;	
 		end if;
 	end process;
-	with std_logic_vector(to_unsigned(prev_val, 3)) select
-		Dseg <= "1001111" WHEN "001",
-				"0010010" WHEN "010",
-				"0000110" WHEN "011",
-				"1001100" WHEN "100",
-				"0100100" WHEN "101",
-				"0100000" WHEN "110",
-				"0000000" WHEN OTHERS;
+	DSeg <= PS2_code(7 downto 1);
+	--with std_logic_vector(to_unsigned(prev_val, 3)) select
+	--	Dseg <= "1001111" WHEN "001",
+	--			"0010010" WHEN "010",
+	--			"0000110" WHEN "011",
+	--			"1001100" WHEN "100",
+	--			"0100100" WHEN "101",
+	--			"0100000" WHEN "110",
+	--			"0000000" WHEN OTHERS;
 end Behavioral;
